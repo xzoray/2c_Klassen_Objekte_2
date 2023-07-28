@@ -2,21 +2,23 @@ package com.cc.java;
 
 public class Cat {
 
-  private String name;
+  private String firstName;
   private String furColor;
   private int age; 
+  private boolean isFemale;
 
 
-public Cat(String name, String furColor, int age) {
-    this.name = name;
+  public Cat(String firstName, String furColor, int age, boolean isFemale) {
+    this.firstName = firstName;
     this.furColor = furColor;
     this.age = age;
+    this.isFemale = isFemale;
   }
 
 public String getStringAttributes(String op) {
   switch (op) {
     case "#name":
-      return name;
+      return firstName;
     case "#color":
       return furColor;
     default:
@@ -25,9 +27,12 @@ public String getStringAttributes(String op) {
 }
 
 public String getAge() {
-    return String.valueOf(age);
+  if (isFemale) {
+    return "This is an inappropriate question!";
+  } else {
+   return String.valueOf(age); 
+  }
   }
 
 
 }
-  
