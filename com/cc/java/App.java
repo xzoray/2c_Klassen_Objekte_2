@@ -10,9 +10,11 @@ public class App {
         output(cat1.getStringAttributes("#color"));
         
         output(cat1.getAge());  
+        output(cat1.getAge());
+        output(cat1.getAge());
+        output(cat1.getAge());
+
         
-
-
         output("-------------------------");
 
         Cat cat2 = new Cat("Alonzo", "grey", 35, false);
